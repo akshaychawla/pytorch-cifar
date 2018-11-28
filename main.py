@@ -20,6 +20,7 @@ from utils import progress_bar
 parser = argparse.ArgumentParser(description='PyTorch CIFAR10 Training')
 parser.add_argument('--lr', default=0.1, type=float, help='learning rate')
 parser.add_argument('--resume', '-r', action='store_true', help='resume from checkpoint')
+parser.add_argument('--checkpoint', help="name of checkpoint")
 args = parser.parse_args()
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
@@ -61,7 +62,8 @@ print('==> Building model..')
 # net = DPN92()
 # net = ShuffleNetG2()
 # net = SENet18()
-net = ShuffleNetV2(1)
+# net = ShufflNetV2(1)
+net = LeNet_NPTN()
 net = net.to(device)
 if device == 'cuda':
     net = torch.nn.DataParallel(net)
@@ -78,6 +80,7 @@ if args.resume:
 
 criterion = nn.CrossEntropyLoss()
 optimizer = optim.SGD(net.parameters(), lr=args.lr, momentum=0.9, weight_decay=5e-4)
+scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, "max")
 
 # Training
 def train(epoch):
@@ -133,10 +136,12 @@ def test(epoch):
         }
         if not os.path.isdir('checkpoint'):
             os.mkdir('checkpoint')
-        torch.save(state, './checkpoint/ckpt.t7')
+        torch.save(state, './checkpoint/{}'.format(args.checkpoint))
         best_acc = acc
+    return acc
 
 
 for epoch in range(start_epoch, start_epoch+200):
     train(epoch)
-    test(epoch)
+    val_acc = test(epoch)
+    scheduler.step(val_acc)
