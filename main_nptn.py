@@ -22,7 +22,13 @@ parser = argparse.ArgumentParser(description='PyTorch CIFAR10 Training')
 parser.add_argument('--lr', default=0.1, type=float, help='learning rate')
 parser.add_argument('--resume', '-r', action='store_true', help='resume from checkpoint')
 parser.add_argument('--logs', help="folder for storing checkpoints and logs")
+parser.add_argument("--in_chs", help="input number of channels for the nptn layers") 
+parser.add_argument("--out_chs", help="output number of channels for the nptn layers") 
+parser.add_argument("--Gs", help="G values for each layer") 
 args = parser.parse_args()
+args.Gs = [int(val) for val in args.Gs.split(",")]
+args.in_chs = [int(val) for val in args.in_chs.split(",")]
+args.out_chs = [int(val) for val in args.out_chs.split(",")]
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 best_acc = 0  # best test accuracy
@@ -75,7 +81,7 @@ print('==> Building model..')
 # net = ShuffleNetG2()
 # net = SENet18()
 # net = ShufflNetV2(1)
-net = LeNet()
+net = LeNet_NPTN(args.in_chs, args.out_chs, args.Gs)
 net = net.to(device)
 if device == 'cuda':
     net = torch.nn.DataParallel(net)
