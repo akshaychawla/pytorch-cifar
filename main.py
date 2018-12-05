@@ -27,9 +27,10 @@ parser.add_argument("--out_chs", help="output number of channels for the nptn la
 parser.add_argument("--Gs", help="G values for each layer") 
 parser.add_argument("--nptn", help="whether to use nptn or cnn architecture", action="store_true")
 args = parser.parse_args()
-args.Gs = [int(val) for val in args.Gs.split(",")]
-args.in_chs = [int(val) for val in args.in_chs.split(",")]
-args.out_chs = [int(val) for val in args.out_chs.split(",")]
+if args.nptn:
+    args.Gs = [int(val) for val in args.Gs.split(",")]
+    args.in_chs = [int(val) for val in args.in_chs.split(",")]
+    args.out_chs = [int(val) for val in args.out_chs.split(",")]
 
 device = 'cuda' if torch.cuda.is_available() else 'cpu'
 best_acc = 0  # best test accuracy
