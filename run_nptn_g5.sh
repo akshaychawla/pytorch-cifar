@@ -1,10 +1,10 @@
-python main_nptn.py --lr=0.1 --logs="./runs/nptn_G5/trial1" --in_chs="3,9" --out_chs="9,16" --Gs="5,5" 
-python main_nptn.py --lr=0.1 --logs="./runs/nptn_G5/trial2" --in_chs="3,9" --out_chs="9,16" --Gs="5,5"
-python main_nptn.py --lr=0.1 --logs="./runs/nptn_G5/trial3" --in_chs="3,9" --out_chs="9,16" --Gs="5,5"
-python main_nptn.py --lr=0.1 --logs="./runs/nptn_G5/trial4" --in_chs="3,9" --out_chs="9,16" --Gs="5,5"
-python main_nptn.py --lr=0.1 --logs="./runs/nptn_G5/trial5" --in_chs="3,9" --out_chs="9,16" --Gs="5,5"
-python main_nptn.py --lr=0.1 --logs="./runs/nptn_G5/trial6" --in_chs="3,9" --out_chs="9,16" --Gs="5,5"
-python main_nptn.py --lr=0.1 --logs="./runs/nptn_G5/trial7" --in_chs="3,9" --out_chs="9,16" --Gs="5,5"
-python main_nptn.py --lr=0.1 --logs="./runs/nptn_G5/trial8" --in_chs="3,9" --out_chs="9,16" --Gs="5,5"
-python main_nptn.py --lr=0.1 --logs="./runs/nptn_G5/trial9" --in_chs="3,9" --out_chs="9,16" --Gs="5,5"
-python main_nptn.py --lr=0.1 --logs="./runs/nptn_G5/trial10" --in_chs="3,9" --out_chs="9,16" --Gs="5,5"
+python main.py --lr=0.1 --logs="./runs/nptn_G5/trial1" --in_chs="3,9" --out_chs="9,16" --Gs="5,5" --nptn 
+python main.py --lr=0.1 --logs="./runs/nptn_G5/trial2" --in_chs="3,9" --out_chs="9,16" --Gs="5,5" --nptn
+python main.py --lr=0.1 --logs="./runs/nptn_G5/trial3" --in_chs="3,9" --out_chs="9,16" --Gs="5,5" --nptn
+python main.py --lr=0.1 --logs="./runs/nptn_G5/trial4" --in_chs="3,9" --out_chs="9,16" --Gs="5,5" --nptn
+python main.py --lr=0.1 --logs="./runs/nptn_G5/trial5" --in_chs="3,9" --out_chs="9,16" --Gs="5,5" --nptn
+python main.py --lr=0.1 --logs="./runs/nptn_G5/trial6" --in_chs="3,9" --out_chs="9,16" --Gs="5,5" --nptn
+python main.py --lr=0.1 --logs="./runs/nptn_G5/trial7" --in_chs="3,9" --out_chs="9,16" --Gs="5,5" --nptn
+python main.py --lr=0.1 --logs="./runs/nptn_G5/trial8" --in_chs="3,9" --out_chs="9,16" --Gs="5,5" --nptn
+python main.py --lr=0.1 --logs="./runs/nptn_G5/trial9" --in_chs="3,9" --out_chs="9,16" --Gs="5,5" --nptn
+python main.py --lr=0.1 --logs="./runs/nptn_G5/trial10" --in_chs="3,9" --out_chs="9,16" --Gs="5,5" --nptn

@@ -1,10 +1,10 @@
-python main_nptn.py --lr=0.1 --logs="./runs/nptn_G1/trial1" --in_chs="3,48" --out_chs="48,16" --Gs="1,1" 
-python main_nptn.py --lr=0.1 --logs="./runs/nptn_G1/trial2" --in_chs="3,48" --out_chs="48,16" --Gs="1,1"
-python main_nptn.py --lr=0.1 --logs="./runs/nptn_G1/trial3" --in_chs="3,48" --out_chs="48,16" --Gs="1,1"
-python main_nptn.py --lr=0.1 --logs="./runs/nptn_G1/trial4" --in_chs="3,48" --out_chs="48,16" --Gs="1,1"
-python main_nptn.py --lr=0.1 --logs="./runs/nptn_G1/trial5" --in_chs="3,48" --out_chs="48,16" --Gs="1,1"
-python main_nptn.py --lr=0.1 --logs="./runs/nptn_G1/trial6" --in_chs="3,48" --out_chs="48,16" --Gs="1,1"
-python main_nptn.py --lr=0.1 --logs="./runs/nptn_G1/trial7" --in_chs="3,48" --out_chs="48,16" --Gs="1,1"
-python main_nptn.py --lr=0.1 --logs="./runs/nptn_G1/trial8" --in_chs="3,48" --out_chs="48,16" --Gs="1,1"
-python main_nptn.py --lr=0.1 --logs="./runs/nptn_G1/trial9" --in_chs="3,48" --out_chs="48,16" --Gs="1,1"
-python main_nptn.py --lr=0.1 --logs="./runs/nptn_G1/trial10" --in_chs="3,48" --out_chs="48,16" --Gs="1,1"
+python main.py --lr=0.1 --logs="./runs/nptn_G1/trial1" --in_chs="3,48" --out_chs="48,16" --Gs="1,1" --nptn 
+python main.py --lr=0.1 --logs="./runs/nptn_G1/trial2" --in_chs="3,48" --out_chs="48,16" --Gs="1,1" --nptn
+python main.py --lr=0.1 --logs="./runs/nptn_G1/trial3" --in_chs="3,48" --out_chs="48,16" --Gs="1,1" --nptn
+python main.py --lr=0.1 --logs="./runs/nptn_G1/trial4" --in_chs="3,48" --out_chs="48,16" --Gs="1,1" --nptn
+python main.py --lr=0.1 --logs="./runs/nptn_G1/trial5" --in_chs="3,48" --out_chs="48,16" --Gs="1,1" --nptn
+python main.py --lr=0.1 --logs="./runs/nptn_G1/trial6" --in_chs="3,48" --out_chs="48,16" --Gs="1,1" --nptn
+python main.py --lr=0.1 --logs="./runs/nptn_G1/trial7" --in_chs="3,48" --out_chs="48,16" --Gs="1,1" --nptn
+python main.py --lr=0.1 --logs="./runs/nptn_G1/trial8" --in_chs="3,48" --out_chs="48,16" --Gs="1,1" --nptn
+python main.py --lr=0.1 --logs="./runs/nptn_G1/trial9" --in_chs="3,48" --out_chs="48,16" --Gs="1,1" --nptn
+python main.py --lr=0.1 --logs="./runs/nptn_G1/trial10" --in_chs="3,48" --out_chs="48,16" --Gs="1,1" --nptn
