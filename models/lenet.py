@@ -8,11 +8,11 @@ class LeNet(nn.Module):
 
         self.conv1 = nn.Conv2d(3, 48, 5)
         self.bn1   = nn.BatchNorm2d(48) 
-        self.prelu1 = nn.PReLu()
+        self.prelu1 = nn.PReLU()
 
         self.conv2 = nn.Conv2d(48, 16, 5)
         self.bn2   = nn.BatchNorm2d(16)
-        self.prelu2 = nn.PReLu()
+        self.prelu2 = nn.PReLU()
 
         self.fc1   = nn.Linear(16*5*5, 10)
 

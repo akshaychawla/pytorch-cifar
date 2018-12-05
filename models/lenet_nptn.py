@@ -9,11 +9,11 @@ class LeNet_NPTN(nn.Module):
 
         self.conv1 = NPTN_vanquish(in_chs[0], out_chs[0], G=Gs[0], k=5, pad=0, stride=1)
         self.bn1   = nn.BatchNorm2d(out_chs[0]) 
-        self.prelu1 = nn.PReLu()
+        self.prelu1 = nn.PReLU()
 
         self.conv2 = NPTN_vanquish(in_chs[1], out_chs[1], G=Gs[1], k=5, pad=0, stride=1)
         self.bn2   = nn.BatchNorm2d(out_chs[1])
-        self.prelu2 = nn.PReLu()
+        self.prelu2 = nn.PReLU()
 
         self.fc1   = nn.Linear(16*5*5, 10)
 
